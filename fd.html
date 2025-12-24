@@ -1,0 +1,233 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ Cars Activity Dubai - Book Your Adventure Ride</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://example.com/desert-hero.jpg'); /* Replace with actual hero image URL */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #0f9d58; /* Green from logo */
+        }
+        header p {
+            font-size: 1.5em;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #0f9d58;
+        }
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .activities {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .activity {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+        }
+        .activity img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .activity button {
+            background: #0f9d58;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .activity button:hover {
+            background: #087f3f;
+        }
+        #booking form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #booking label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        #booking input, #booking select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #booking button {
+            background: #0f9d58;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        #booking button:hover {
+            background: #087f3f;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #0f9d58;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DZ Cars Activity Dubai</h1>
+        <p>Thrilling Adventures in the Desert & Sea – Book Your Ride Today!</p>
+        <a href="#booking"><button style="background: #0f9d58; color: white; padding: 15px 30px; border: none; cursor: pointer;">Book Now</button></a>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#activities">Activities</a>
+        <a href="#booking">Booking</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to DZ Cars Activity Dubai</h2>
+        <p>Experience adrenaline-pumping rides with our dune buggies, quad bikes (ATVs), and jet skis. Based in Dubai, we offer safe, guided adventures for individuals, families, and groups. Our logo represents speed, excitement, and the spirit of Dubai!</p>
+    </section>
+
+    <section id="activities">
+        <h2>Our Activities</h2>
+        <div class="activities">
+            <div class="activity">
+                <img src="https://example.com/dune-buggy.jpg" alt="Dune Buggy"> <!-- Replace with actual image URL -->
+                <h3>Dune Buggy Rides</h3>
+                <p>Self-drive powerful buggies over the red dunes. Durations: 30min, 1hr, 2hr. Starting from AED 500.</p>
+                <a href="#booking"><button>Book Dune Buggy</button></a>
+            </div>
+            <div class="activity">
+                <img src="https://example.com/quad-bike.jpg" alt="Quad Bike"> <!-- Replace with actual image URL -->
+                <h3>Quad Bike / ATV Adventures</h3>
+                <p>Explore the desert on four-wheelers. Guided tours available. Starting from AED 300.</p>
+                <a href="#booking"><button>Book Quad Bike</button></a>
+            </div>
+            <div class="activity">
+                <img src="https://example.com/jet-ski.jpg" alt="Jet Ski"> <!-- Replace with actual image URL -->
+                <h3>Jet Ski Experiences</h3>
+                <p>High-speed fun on Dubai's waters with views of iconic landmarks. Starting from AED 400.</p>
+                <a href="#booking"><button>Book Jet Ski</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Book Your Ride</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with actual form handler, e.g., Formspree or your backend -->
+            <label for="activity">Select Activity:</label>
+            <select id="activity" name="activity" required>
+                <option value="">Choose...</option>
+                <option value="Dune Buggy">Dune Buggy</option>
+                <option value="Quad Bike">Quad Bike / ATV</option>
+                <option value="Jet Ski">Jet Ski</option>
+                <option value="Combo">Combo Package</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="participants">Number of Participants:</label>
+            <input type="number" id="participants" name="participants" min="1" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+        <p>Alternatively, WhatsApp us at +971 50 702 4875 for instant booking!</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://example.com/gallery1.jpg" alt="Adventure 1"> <!-- Replace with actual URLs -->
+            <img src="https://example.com/gallery2.jpg" alt="Adventure 2">
+            <img src="https://example.com/gallery3.jpg" alt="Adventure 3">
+            <img src="https://example.com/gallery4.jpg" alt="Adventure 4">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone/WhatsApp: +971 50 702 4875</p>
+        <p>Email: info@dzcarsactivitydubai.com</p>
+        <p>Location: Dubai Desert Area – View on <a href="https://maps.google.com">Google Maps</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 DZ Cars Activity Dubai. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>
