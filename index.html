@@ -13,7 +13,7 @@
             color: #333;
         }
         header {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://example.com/desert-hero.jpg'); /* Replace with actual hero image URL */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://example.com/desert-hero.jpg');
             background-size: cover;
             color: white;
             text-align: center;
@@ -22,7 +22,7 @@
         header h1 {
             font-size: 3em;
             margin: 0;
-            color: #0f9d58; /* Green from logo */
+            color: #0f9d58;
         }
         header p {
             font-size: 1.5em;
@@ -87,7 +87,7 @@
             margin: 10px 0 5px;
             text-align: left;
         }
-        #booking input, #booking select {
+        #booking input, #booking select, #booking textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -153,19 +153,19 @@
         <h2>Our Activities</h2>
         <div class="activities">
             <div class="activity">
-                <img src="https://example.com/dune-buggy.jpg" alt="Dune Buggy"> <!-- Replace with actual image URL -->
+                <img src="https://example.com/dune-buggy.jpg" alt="Dune Buggy">
                 <h3>Dune Buggy Rides</h3>
                 <p>Self-drive powerful buggies over the red dunes. Durations: 30min, 1hr, 2hr. Starting from AED 500.</p>
                 <a href="#booking"><button>Book Dune Buggy</button></a>
             </div>
             <div class="activity">
-                <img src="https://example.com/quad-bike.jpg" alt="Quad Bike"> <!-- Replace with actual image URL -->
+                <img src="https://example.com/quad-bike.jpg" alt="Quad Bike">
                 <h3>Quad Bike / ATV Adventures</h3>
                 <p>Explore the desert on four-wheelers. Guided tours available. Starting from AED 300.</p>
                 <a href="#booking"><button>Book Quad Bike</button></a>
             </div>
             <div class="activity">
-                <img src="https://example.com/jet-ski.jpg" alt="Jet Ski"> <!-- Replace with actual image URL -->
+                <img src="https://example.com/jet-ski.jpg" alt="Jet Ski">
                 <h3>Jet Ski Experiences</h3>
                 <p>High-speed fun on Dubai's waters with views of iconic landmarks. Starting from AED 400.</p>
                 <a href="#booking"><button>Book Jet Ski</button></a>
@@ -175,7 +175,10 @@
 
     <section id="booking">
         <h2>Book Your Ride</h2>
-        <form action="https://formspree.io/f/xaqwgavp" method="POST">
+        <!-- Web3Forms Access Key added -->
+        <form method="POST" action="https://api.web3forms.com/submit">
+            <input type="hidden" name="access_key" value="d770d139-3a56-4742-b347-40313ddb3b50">
+
             <label for="activity">Select Activity:</label>
             <select id="activity" name="activity" required>
                 <option value="">Choose...</option>
@@ -211,7 +214,7 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="https://example.com/gallery1.jpg" alt="Adventure 1"> <!-- Replace with actual URLs -->
+            <img src="https://example.com/gallery1.jpg" alt="Adventure 1">
             <img src="https://example.com/gallery2.jpg" alt="Adventure 2">
             <img src="https://example.com/gallery3.jpg" alt="Adventure 3">
             <img src="https://example.com/gallery4.jpg" alt="Adventure 4">
@@ -230,4 +233,4 @@
     </footer>
 
 </body>
-</html>
+                                                           </html>
