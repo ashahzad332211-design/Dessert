@@ -1,7 +1,7 @@
 <section id="booking">
     <h2>Book Your Ride</h2>
-    <!-- Web3Forms Access Key added -->
-    <form method="POST" action="https://api.web3forms.com/submit">
+    <!-- Web3Forms Access Key -->
+    <form id="booking-form" method="POST" action="https://api.web3forms.com/submit">
         <input type="hidden" name="access_key" value="d770d139-3a56-4742-b347-40313ddb3b50">
 
         <label for="activity">Select Activity:</label>
@@ -34,7 +34,33 @@
         <button type="submit">Submit Booking</button>
     </form>
 
-    <!-- WhatsApp Notification Button -->
+    <!-- WhatsApp Notification Button (manual click) -->
+    <p>Or notify via WhatsApp instantly:</p>
+    <a id="whatsapp-btn" href="#" target="_blank" style="display:inline-block;background:#25D366;color:white;padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:bold;">
+        Send WhatsApp Notification
+    </a>
+</section>
+
+<script>
+    const waBtn = document.getElementById('whatsapp-btn');
+
+    waBtn.addEventListener('click', function(){
+        // Get form values
+        const name = document.getElementById('name').value;
+        const activity = document.getElementById('activity').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const participants = document.getElementById('participants').value;
+
+        // Create prefilled WhatsApp message
+        const waMessage = encodeURIComponent(
+            `New Booking from DZ Cars:\nName: ${name}\nActivity: ${activity}\nDate: ${date}\nTime: ${time}\nParticipants: ${participants}`
+        );
+
+        // Update WhatsApp link
+        waBtn.href = `https://wa.me/971507024875?text=${waMessage}`;
+    });
+</script>    <!-- WhatsApp Notification Button -->
     <p>Or instantly notify via WhatsApp:</p>
     <a id="whatsapp-btn" href="#" target="_blank" style="display:inline-block;background:#25D366;color:white;padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:bold;">
         Send WhatsApp Notification
