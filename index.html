@@ -1,40 +1,70 @@
-<section id="booking">
-    <h2>Book Your Ride</h2>
-    <!-- Web3Forms Access Key -->
-    <form id="booking-form" method="POST" action="https://api.web3forms.com/submit">
-        <input type="hidden" name="access_key" value="d770d139-3a56-4742-b347-40313ddb3b50">
-
-        <label for="activity">Select Activity:</label>
-        <select id="activity" name="activity" required>
-            <option value="">Choose...</option>
-            <option value="Dune Buggy">Dune Buggy</option>
-            <option value="Quad Bike">Quad Bike / ATV</option>
-            <option value="Jet Ski">Jet Ski</option>
-            <option value="Combo">Combo Package</option>
-        </select>
-
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
-
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time" required>
-
-        <label for="participants">Number of Participants:</label>
-        <input type="number" id="participants" name="participants" min="1" required>
-
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required>
-
-        <button type="submit">Submit Booking</button>
-    </form>
-
-    <!-- WhatsApp Notification Button (manual click) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DZ Cars Activity Dubai - Book Your Adventure Ride</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://example.com/desert-hero.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+header h1 { font-size: 3em; margin: 0; color: #0f9d58; }
+header p { font-size: 1.5em; }
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover { color: #0f9d58; }
+section { padding: 50px 20px; text-align: center; }
+.activities { display: flex; justify-content: space-around; flex-wrap: wrap; }
+.activity {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+}
+.activity img { width: 100%; border-radius: 10px; }
+.activity button {
+    background: #0f9d58;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+.activity button:hover { background: #087f3f; }
+#booking form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#booking label { display: block; margin: 10px 0 5px; text-align: left; }
+#booking input, #booking select { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
+#    <!-- WhatsApp Notification Button (manual click) -->
     <p>Or notify via WhatsApp instantly:</p>
     <a id="whatsapp-btn" href="#" target="_blank" style="display:inline-block;background:#25D366;color:white;padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:bold;">
         Send WhatsApp Notification
